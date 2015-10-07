@@ -2,26 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#F0F0F0" >
 
+    <View  
+        android:layout_width="fill_parent"  
+        android:layout_height="1dip"  
+        android:background="#FF909090" /> 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal" 
+        android:layout_margin="6dp"
+        android:textSize="13dp"
+        android:background="#FFFFFFFF">
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="起点：" />
+            android:text="@string/start" 
+            android:layout_marginLeft="3dp"
+            />
 
         <EditText
             android:id="@+id/start"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="龙泽" >
-
+            android:ems="7"
+            android:background="@null"
+            android:textSize="13dp">
             <requestFocus />
         </EditText>
     </LinearLayout>
@@ -29,20 +39,24 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
+        android:orientation="horizontal" 
+        android:layout_margin="6dp"
+        android:textSize="13dp"
+        android:background="#FFFFFFFF">
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="终点：" />
+            android:text="@string/end"
+            android:layout_marginLeft="3dp" />
 
         <EditText
             android:id="@+id/end"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="西单" >
+            android:ems="7"
+            android:background="@null"
+            android:textSize="13dp" >
 
             <requestFocus />
         </EditText>
@@ -89,6 +103,11 @@
             android:text="步行搜索" />
     </LinearLayout>
 
+    <View  
+        android:layout_width="fill_parent"  
+        android:layout_height="1dip"  
+        android:background="#FF909090" />
+    
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" >

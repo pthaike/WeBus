@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -15,15 +15,16 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:background">@drawable/title_bg</item>
     </style>
     
     <style name="main_tab_bottom">
         <item name="android:textSize">@dimen/bottom_tab_font_size</item>
         <item name="android:textColor">#ffffffff</item>
         <item name="android:ellipsize">marquee</item>
-        <item name="android:gravity">center_horizontal</item>
         <item name="android:background">@drawable/home_btn_bg</item>
         <item name="android:paddingTop">@dimen/bottom_tab_padding_up</item>
+        <item name="android:gravity">center_horizontal</item> 
         <item name="android:paddingBottom">2.0dip</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -33,5 +34,12 @@
         <item name="android:drawablePadding">@dimen/bottom_tab_padding_drawable</item>
         <item name="android:layout_weight">1.0</item>
     </style>
-
+	<style name="CustomWindowTitleBackground"> 
+	    <item name="android:background">@drawable/navigation</item> 
+	</style>
+	
+	<style name="test" parent="android:Theme"> 
+	    <item name="android:windowTitleSize">40dp</item> 
+	    <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item> 
+	</style>
 </resources>

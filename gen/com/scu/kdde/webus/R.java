@@ -43,7 +43,7 @@ public final class R {
     }
     public static final class drawable {
         public static final int bashi_press=0x7f020000;
-        public static final int black=0x7f020017;
+        public static final int black=0x7f02001b;
         public static final int bus=0x7f020001;
         public static final int bus_b=0x7f020002;
         public static final int button_down=0x7f020003;
@@ -56,25 +56,30 @@ public final class R {
         public static final int icon_en=0x7f02000a;
         public static final int icon_st=0x7f02000b;
         public static final int line=0x7f02000c;
-        public static final int list_background=0x7f02001b;
-        public static final int ltgray=0x7f020015;
-        public static final int ltyellow=0x7f020016;
+        public static final int list_background=0x7f02001f;
+        public static final int ltgray=0x7f020019;
+        public static final int ltyellow=0x7f02001a;
         public static final int mapsearch=0x7f02000d;
-        public static final int namcard_picker_bkg_hover=0x7f02001d;
-        public static final int namcard_picker_bkg_normal=0x7f02001c;
+        public static final int namcard_picker_bkg_hover=0x7f020021;
+        public static final int namcard_picker_bkg_normal=0x7f020020;
         public static final int navigation=0x7f02000e;
-        public static final int next_=0x7f02000f;
-        public static final int popup=0x7f020010;
-        public static final int pre_=0x7f020011;
-        public static final int transparent=0x7f020018;
-        public static final int transparent_background=0x7f02001a;
-        public static final int user=0x7f020012;
-        public static final int user_b=0x7f020013;
-        public static final int webus=0x7f020014;
-        public static final int widget_edit_block_bg_normal=0x7f020019;
+        public static final int next=0x7f02000f;
+        public static final int next_=0x7f020010;
+        public static final int popup=0x7f020011;
+        public static final int pre_=0x7f020012;
+        public static final int search=0x7f020013;
+        public static final int title_bg=0x7f020014;
+        public static final int transparent=0x7f02001c;
+        public static final int transparent_background=0x7f02001e;
+        public static final int user=0x7f020015;
+        public static final int user_b=0x7f020016;
+        public static final int webus=0x7f020017;
+        public static final int webus_small=0x7f020018;
+        public static final int widget_edit_block_bg_normal=0x7f02001d;
     }
     public static final class id {
-        public static final int action_settings=0x7f050017;
+        public static final int Titlhome=0x7f050017;
+        public static final int action_settings=0x7f050019;
         public static final int bmapView=0x7f05000d;
         public static final int buslinebmapView=0x7f05000a;
         public static final int city=0x7f050006;
@@ -96,6 +101,7 @@ public final class R {
         public static final int start=0x7f05000f;
         public static final int textView1=0x7f05000e;
         public static final int textView2=0x7f050010;
+        public static final int titletext=0x7f050018;
         public static final int transit=0x7f050013;
         public static final int walk=0x7f050014;
     }
@@ -104,6 +110,7 @@ public final class R {
         public static final int activity_main=0x7f030001;
         public static final int activity_routeplan=0x7f030002;
         public static final int maintabs=0x7f030003;
+        public static final int title=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -112,12 +119,16 @@ public final class R {
         public static final int action_settings=0x7f060002;
         public static final int app_name=0x7f060000;
         public static final int busline=0x7f060003;
+        public static final int city=0x7f06000c;
+        public static final int end=0x7f06000a;
         public static final int hello_world=0x7f060001;
-        public static final int iccard=0x7f060006;
+        public static final int iccard=0x7f060007;
         public static final int line=0x7f060004;
-        public static final int mapsearch=0x7f060005;
-        public static final int other=0x7f060008;
-        public static final int user=0x7f060007;
+        public static final int linename=0x7f060005;
+        public static final int mapsearch=0x7f060006;
+        public static final int other=0x7f060009;
+        public static final int start=0x7f06000b;
+        public static final int user=0x7f060008;
     }
     public static final class style {
         /** 
@@ -143,9 +154,10 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        public static final int CustomWindowTitleBackground=0x7f070003;
         public static final int main_tab_bottom=0x7f070002;
+        public static final int test=0x7f070004;
     }
 }

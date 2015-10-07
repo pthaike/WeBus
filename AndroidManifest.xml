@@ -7,12 +7,11 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/webus"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/test" >
         <meta-data  
         android:name="com.baidu.lbsapi.API_KEY"  
         android:value="5904ieposir2TBNh5N8dwyXn" />

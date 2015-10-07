@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabWidget;
+import android.widget.TextView;
 
 public class MainTabActivity extends TabActivity implements OnCheckedChangeListener{
 	
@@ -20,15 +21,16 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 	private Intent mCIntent;
 	private Intent mDIntent;
 	private Intent mEIntent;
-	private final int TABNUM = 5;
+	private TextView titletext = null;
 	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         setContentView(R.layout.maintabs);
-        
+        getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.title);
+        titletext = (TextView)findViewById(R.id.titletext);
         this.mAIntent = new Intent(this,RoutePlanDemo.class);
         this.mBIntent = new Intent(this,BusLineSearchDemo.class);
         this.mCIntent = new Intent(this,MainActivity.class);
@@ -112,7 +114,6 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 			mTabHost = getTabHost();
 			TabHost localTabHost = mTabHost;
 			TabWidget tabWidget = localTabHost.getTabWidget();
-			System.out.println("++++++++++++++");
 			for(int i = 0; i < tabWidget.getTabCount(); i++)
 			{
 				View vw = tabWidget.getChildAt(i);
@@ -120,9 +121,11 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 				{
 					switch(i){
 					case 0:
+						titletext.setText("路线查询");
 						vw.setBackgroundDrawable(getResources().getDrawable(R.drawable.user_b));
 						break;
 					case 1:
+						titletext.setText("公交查询");
 						vw.setBackgroundDrawable(getResources().getDrawable(R.drawable.user_b));
 						break;
 					case 2:
@@ -132,6 +135,7 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 						vw.setBackgroundDrawable(getResources().getDrawable(R.drawable.user_b));
 						break;
 					case 4:
+						titletext.setText("用户信息");
 						vw.setBackgroundDrawable(getResources().getDrawable(R.drawable.bus_b));
 						break;
 					}

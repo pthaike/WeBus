@@ -6,9 +6,13 @@
     <string name="action_settings">Settings</string>
     <string name="busline">公交路线</string>
     <string name="line">路线</string>
+    <string name="linename">路线:</string>
     <string name="mapsearch">地图</string>
     <string name="iccard">卡</string>
     <string name="user">用户</string>
     <string name="other">其他</string>
+    <string name="end">终点:</string>
+    <string name="start">起点:</string>
+    <string name="city">市区:</string>
 
 </resources>

@@ -2,69 +2,91 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#F0F0F0"
     android:orientation="vertical" >
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="在" />
-
-        <EditText
-            android:id="@+id/city"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="上海" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="市内找" />
-
-        <EditText
-            android:id="@+id/searchkey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="717" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="公交车" />
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+	<View  
+        android:layout_width="fill_parent"  
+        android:layout_height="1dip"  
+        android:background="#FF909090" />
+	<LinearLayout android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_margin="15dp">
+	    <LinearLayout android:layout_width="0px"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:layout_weight="3">
+	        <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" 
+		        android:textSize="13dp"
+		        android:layout_margin="2dp"
+		        android:background="#FFFFFFFF">
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/city" />
+		        <EditText
+		            android:id="@+id/city"
+		            android:layout_width="wrap_content"
+		            android:layout_height="fill_parent"
+		            android:background="@null"
+		            android:textSize="13dp"
+		            android:text="上海" />
+			</LinearLayout>
+			<LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:orientation="horizontal" 
+		        android:textSize="13dp"
+		        android:layout_margin="2dp"
+		        android:background="#FFFFFFFF">
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/linename" />
+		
+		        <EditText
+		            android:id="@+id/searchkey"
+		            android:layout_width="fill_parent"
+		            android:layout_height="fill_parent"
+		            android:background="@null"
+		            android:textSize="13dp"
+		            android:text="717" />
+			</LinearLayout>
+	    </LinearLayout>
+	    
+		<LinearLayout
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" 
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical">
 
             <Button
                 android:id="@+id/search"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="2dip"
-                android:layout_marginRight="2dip"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="searchButtonProcess"
-                android:text="开始" />
+                android:background="@drawable/search"
+                android:onClick="searchButtonProcess" />
 
             <Button
                 android:id="@+id/nextline"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="2dip"
-                android:layout_marginRight="2dip"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:onClick="SearchNextBusline"
-                android:text="下一条" />
+                android:background="@drawable/next"
+                android:onClick="SearchNextBusline" />
+
         </LinearLayout>
+    
     </LinearLayout>
 
+	<View  
+        android:layout_width="fill_parent"  
+        android:layout_height="1dip"  
+        android:background="#FF909090" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -83,7 +105,8 @@
             android:layout_alignWithParentIfMissing="false"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="false"
-            android:layout_marginBottom="10dip" >
+            android:orientation="vertical"
+            >
 
             <Button
                 android:id="@+id/pre"
@@ -91,7 +114,6 @@
                 android:layout_height="fill_parent"
                 android:layout_marginLeft="2dip"
                 android:layout_marginRight="2dip"
-                android:layout_weight="1.0"
                 android:background="@drawable/pre_"
                 android:onClick="nodeClick" />
 
@@ -101,10 +123,8 @@
                 android:layout_height="fill_parent"
                 android:layout_marginLeft="2dip"
                 android:layout_marginRight="2dip"
-                android:layout_weight="1.0"
                 android:background="@drawable/next_"
                 android:onClick="nodeClick" />
         </LinearLayout>
     </RelativeLayout>
-
 </LinearLayout>
