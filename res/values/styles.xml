@@ -20,7 +20,7 @@
     
     <style name="main_tab_bottom">
         <item name="android:textSize">@dimen/bottom_tab_font_size</item>
-        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textColor">#ff8000</item>
         <item name="android:ellipsize">marquee</item>
         <item name="android:background">@drawable/home_btn_bg</item>
         <item name="android:paddingTop">@dimen/bottom_tab_padding_up</item>
