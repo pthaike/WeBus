@@ -14,5 +14,24 @@
     <string name="end">终点:</string>
     <string name="start">起点:</string>
     <string name="city">市区:</string>
+    
+    <string name="login_label_username">帐号</string>  
+    <string name="login_label_password">密码</string>  
+    <string name="login_label_signin">登 录</string>  
+    <string name="login_status_logging_in">登录中...</string>  
+    <string name="login_username_hint">Email或手机号</string>  
+    <string name="login_register_link">没有帐号？ <a href="#" mce_href="#">注册</a></string>   
+    
+    <string name="register_username">昵称</string>
+    <string name="register_label_username">账号</string>
+    <string name="register_rlabel_password">重复密码</string>
+    <string name="register_label_signin">注册</string>
+    
+    <string name="iccard_hint">请输入公交IC卡卡号</string>
+    <string name="bind_button_text">绑定</string>
+    <string name="yue_label">余额</string>
+    <string name="yue_edit_label">0.00元</string>
+    <string name="record_label">消费记录查询</string>
+    <string name="chongzhi_label">充值记录查询</string>
 
 </resources>

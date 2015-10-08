@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:gravity="center_vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/background_login">
+  <!-- padding 内边距   layout_margin 外边距
+  		android:layout_alignParentTop 布局的位置是否处于顶部 -->
+  	
+  <RelativeLayout 
+  	android:id="@+id/login_div"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:padding="15dip"        
+  	android:layout_margin="15dip" 
+  	android:background="@drawable/background_login_div_bg"
+  	>
+
+  	<LinearLayout
+  	    android:id="@+id/l1"
+  	    android:layout_width="fill_parent"
+  	    android:layout_height="wrap_content" >
+
+  	    <EditText
+  	        android:id="@+id/iccard"
+  	        android:layout_width="wrap_content"
+  	        android:layout_height="wrap_content"
+  	        android:hint="@string/iccard_hint"
+  	        android:inputType="text"
+  	        android:singleLine="true" />
+
+  	    <Button
+  	        android:id="@+id/bind_button"
+  	        android:layout_width="wrap_content"
+  	        android:layout_height="35dp"
+  	        android:layout_weight="0.41"
+  	        android:background="@drawable/blue_button"
+  	        android:text="@string/bind_button_text" />
+  	</LinearLayout>
+  	
+  	<LinearLayout
+  	    android:id="@+id/l2"
+  	    android:layout_width="fill_parent"
+  	    android:layout_height="wrap_content"
+  	    android:layout_below="@id/l1"
+  	    android:layout_margin="15dip" >
+
+  		<TextView
+  		    android:id="@+id/yue"
+  		    style="@style/normalText"
+  		    android:layout_width="wrap_content"
+  		    android:layout_height="wrap_content"
+  		    android:layout_marginLeft="1dp"
+  		    android:layout_marginTop="5dp"
+  		    android:text="@string/yue_label" />
+
+  		<EditText
+  		    android:id="@+id/yue_edit"
+  		    android:layout_width="156dp"
+  		    android:layout_height="wrap_content"
+  		    android:layout_marginLeft="30dp"
+  		    android:editable="false"
+  		    android:ems="10"
+  		    android:gravity="center_horizontal"
+  		    android:hint="@string/yue_edit_label"
+  		    android:inputType="text"
+  		    android:singleLine="true" >
+
+  		    <requestFocus />
+  		</EditText>
+
+  	</LinearLayout>
+    
+    <Button
+        android:id="@+id/record_button"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignRight="@+id/l1"
+        android:layout_below="@id/l2"
+        android:background="@drawable/blue_button"
+        android:text="@string/record_label" />
+    
+    <Button
+        android:id="@+id/chongzhi_butten"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignRight="@+id/l1"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/record_button"
+        android:background="@drawable/blue_button"
+        android:text="@string/chongzhi_label" />
+
+  </RelativeLayout>
+ 
+</LinearLayout>

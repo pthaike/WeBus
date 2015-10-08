@@ -33,16 +33,15 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
         titletext = (TextView)findViewById(R.id.titletext);
         this.mAIntent = new Intent(this,RoutePlanDemo.class);
         this.mBIntent = new Intent(this,BusLineSearchDemo.class);
-        this.mCIntent = new Intent(this,MainActivity.class);
-        this.mDIntent = new Intent(this,MainActivity.class);
-        this.mEIntent = new Intent(this,MainActivity.class);
+        this.mDIntent = new Intent(this,UserActivity.class);
+        this.mEIntent = new Intent(this,LoginActivity.class);
         
 		((RadioButton) findViewById(R.id.radio_button0))
 		.setOnCheckedChangeListener(this);
         ((RadioButton) findViewById(R.id.radio_button1))
 		.setOnCheckedChangeListener(this);
-        ((RadioButton) findViewById(R.id.radio_button2))
-		.setOnCheckedChangeListener(this);
+//        ((RadioButton) findViewById(R.id.radio_button2))
+//		.setOnCheckedChangeListener(this);
         ((RadioButton) findViewById(R.id.radio_button3))
 		.setOnCheckedChangeListener(this);
         ((RadioButton) findViewById(R.id.radio_button4))
@@ -65,9 +64,9 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 			case R.id.radio_button1:
 				this.mTabHost.setCurrentTabByTag("B_TAB");
 				break;
-			case R.id.radio_button2:
-				this.mTabHost.setCurrentTabByTag("C_TAB");
-				break;
+//			case R.id.radio_button2:
+//				this.mTabHost.setCurrentTabByTag("C_TAB");
+//				break;
 			case R.id.radio_button3:
 				this.mTabHost.setCurrentTabByTag("D_TAB");
 				break;
@@ -88,9 +87,9 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 		localTabHost.addTab(buildTabSpec("B_TAB", R.string.mapsearch,
 				R.drawable.mapsearch, this.mBIntent));
 
-		localTabHost.addTab(buildTabSpec("C_TAB",
-				R.string.iccard, R.drawable.iccard,
-				this.mCIntent));
+//		localTabHost.addTab(buildTabSpec("C_TAB",
+//				R.string.iccard, R.drawable.iccard,
+//				this.mCIntent));
 
 		localTabHost.addTab(buildTabSpec("D_TAB", R.string.user,
 				R.drawable.user, this.mDIntent));

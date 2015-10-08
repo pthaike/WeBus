@@ -34,7 +34,7 @@ import android.widget.Toast;
 /**
  * 此demo用来展示如何进行公交线路详情检索，并使用RouteOverlay在地图上绘制 同时展示如何浏览路线节点并弹出泡泡
  */
-public class BusLineSearchDemo extends FragmentActivity implements
+public class BusLineSearchDemo extends FragmentActivity implements 
 		OnGetPoiSearchResultListener, OnGetBusLineSearchResultListener,
 		BaiduMap.OnMapClickListener {
 	private Button mBtnPre = null;// 上一个节点
@@ -69,6 +69,7 @@ public class BusLineSearchDemo extends FragmentActivity implements
 		busLineIDList = new ArrayList<String>();
 		overlay = new BusLineOverlay(mBaiduMap);
 		mBaiduMap.setOnMarkerClickListener(overlay);
+
 	}
 
 	/**
@@ -209,4 +210,6 @@ public class BusLineSearchDemo extends FragmentActivity implements
 	public boolean onMapPoiClick(MapPoi poi) {
 		return false;
 	}
+
+
 }

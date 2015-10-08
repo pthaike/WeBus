@@ -357,12 +357,14 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
 
     @Override
     protected void onPause() {
+    	mMapView.setVisibility(View.INVISIBLE);
         mMapView.onPause();
         super.onPause();
     }
 
     @Override
     protected void onResume() {
+    	mMapView.setVisibility(View.VISIBLE);
         mMapView.onResume();
         super.onResume();
     }

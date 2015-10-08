@@ -9,7 +9,7 @@
                 android:layout_width="fill_parent" android:layout_height="wrap_content">
                 <RadioButton  android:id="@+id/radio_button0" android:layout_marginTop="2.0dip" android:text="@string/line" android:drawableTop="@drawable/line" style="@style/main_tab_bottom" />
                 <RadioButton  android:id="@+id/radio_button1" android:layout_marginTop="2.0dip" android:text="@string/busline" android:drawableTop="@drawable/bus" style="@style/main_tab_bottom" />
-                <RadioButton  android:id="@+id/radio_button2" android:layout_marginTop="2.0dip" android:text="@string/mapsearch" android:drawableTop="@drawable/mapsearch" style="@style/main_tab_bottom" />
+                <!-- <RadioButton  android:id="@+id/radio_button2" android:layout_marginTop="2.0dip" android:text="@string/mapsearch" android:drawableTop="@drawable/mapsearch" style="@style/main_tab_bottom" /> -->
                 <RadioButton  android:id="@id/radio_button3" android:layout_marginTop="2.0dip" android:text="@string/iccard" android:drawableTop="@drawable/iccard" style="@style/main_tab_bottom" />
                 <RadioButton  android:id="@id/radio_button4" android:layout_marginTop="2.0dip" android:text="@string/user" android:drawableTop="@drawable/user" style="@style/main_tab_bottom" />
             </RadioGroup>
