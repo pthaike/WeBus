@@ -93,8 +93,8 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
         EditText editSt = (EditText) findViewById(R.id.start);
         EditText editEn = (EditText) findViewById(R.id.end);
         //设置起终点信息，对于tranist search 来说，城市名无意义
-        PlanNode stNode = PlanNode.withCityNameAndPlaceName("北京", editSt.getText().toString());
-        PlanNode enNode = PlanNode.withCityNameAndPlaceName("北京", editEn.getText().toString());
+        PlanNode stNode = PlanNode.withCityNameAndPlaceName("上海", editSt.getText().toString());
+        PlanNode enNode = PlanNode.withCityNameAndPlaceName("上海", editEn.getText().toString());
 
         // 实际使用中请对起点终点城市进行正确的设定
         if (v.getId() == R.id.drive) {
@@ -104,7 +104,7 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
         } else if (v.getId() == R.id.transit) {
             mSearch.transitSearch((new TransitRoutePlanOption())
                     .from(stNode)
-                    .city("北京")
+                    .city("上海")
                     .to(enNode));
         } else if (v.getId() == R.id.walk) {
             mSearch.walkingSearch((new WalkingRoutePlanOption())
@@ -160,7 +160,7 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
         }
         //移动节点至中心
         mBaidumap.setMapStatus(MapStatusUpdateFactory.newLatLng(nodeLocation));
-        // show popup
+        // show pop up
         popupText = new TextView(RoutePlanDemo.this);
         popupText.setBackgroundResource(R.drawable.popup);
         popupText.setTextColor(0xFF000000);
@@ -219,6 +219,7 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
             WalkingRouteOverlay overlay = new MyWalkingRouteOverlay(mBaidumap);
             mBaidumap.setOnMarkerClickListener(overlay);
             routeOverlay = overlay;
+            System.out.println("routeLines---walkingroute---------------->"+result.getRouteLines());
             overlay.setData(result.getRouteLines().get(0));
             overlay.addToMap();
             overlay.zoomToSpan();
@@ -245,6 +246,10 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
             TransitRouteOverlay overlay = new MyTransitRouteOverlay(mBaidumap);
             mBaidumap.setOnMarkerClickListener(overlay);
             routeOverlay = overlay;
+            System.out.println("routeLines---transiroute---------------->"+result.getRouteLines().size());
+            for(int i = 0; i < result.getRouteLines().size(); i++){
+            	System.out.println(result.getRouteLines().get(i).getTerminal().getUid().toString());
+            }
             overlay.setData(result.getRouteLines().get(0));
             overlay.addToMap();
             overlay.zoomToSpan();
@@ -269,6 +274,7 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
             DrivingRouteOverlay overlay = new MyDrivingRouteOverlay(mBaidumap);
             routeOverlay = overlay;
             mBaidumap.setOnMarkerClickListener(overlay);
+            System.out.println("routeLines-------drivingroute------------>"+result.getRouteLines());
             overlay.setData(result.getRouteLines().get(0));
             overlay.addToMap();
             overlay.zoomToSpan();
