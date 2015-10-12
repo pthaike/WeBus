@@ -32,7 +32,7 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
         getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.title);
         titletext = (TextView)findViewById(R.id.titletext);
         this.mAIntent = new Intent(this,RoutePlanDemo.class);
-        this.mBIntent = new Intent(this,BusLineSearchDemo.class);
+        this.mBIntent = new Intent(this,CrowActivity.class);
         this.mDIntent = new Intent(this,UserActivity.class);
         this.mEIntent = new Intent(this,LoginActivity.class);
         
