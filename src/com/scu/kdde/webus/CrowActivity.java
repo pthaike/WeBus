@@ -3,6 +3,7 @@ package com.scu.kdde.webus;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import com.baidu.mapapi.search.busline.BusLineResult;
@@ -18,6 +19,7 @@ import com.baidu.mapapi.search.poi.PoiResult;
 import com.baidu.mapapi.search.poi.PoiSearch;
 
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -47,6 +49,12 @@ public class CrowActivity extends Activity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.crowline);
+		
+		//ÉèÖÃÓïÑÔ
+		Configuration config = getResources().getConfiguration();
+		config.locale = Locale.TRADITIONAL_CHINESE;
+		getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+		
 		CharSequence titleLable = "Óµ¼·²éÑ¯";
 		setTitle(titleLable);
 		cityEdit = (EditText)findViewById(R.id.city);
@@ -109,7 +117,7 @@ public class CrowActivity extends Activity implements
 			return;
 		}
 		route = result;
-		System.out.println("BusLineName====>"+result.getBusLineName());
+		//System.out.println("BusLineName====>"+result.getBusLineName());
 //		overlay.removeFromMap();
 //		overlay.setData(result);
 //		overlay.addToMap();
@@ -121,7 +129,7 @@ public class CrowActivity extends Activity implements
 			map.put("station", route.getStations().get(i).getTitle());
 			map.put("title", i);
 			list.add(map);
-			System.out.println("route.getStations()====>"+route.getStations().get(i).getTitle());
+			//System.out.println("route.getStations()====>"+route.getStations().get(i).getTitle());
 		}
 		timeLineAdapter = new TimeLineAdapter(this, list);
 		listView.setAdapter(timeLineAdapter);
@@ -149,7 +157,7 @@ public class CrowActivity extends Activity implements
 			if (poi.type == PoiInfo.POITYPE.BUS_LINE
 					|| poi.type == PoiInfo.POITYPE.SUBWAY_LINE) {
 				busLineIDList.add(poi.uid);
-				System.out.println("poi.uid+++++++>"+poi.uid);
+				//System.out.println("poi.uid+++++++>"+poi.uid);
 			}
 		}
 		System.out.println("onGetPoiResult++busLineIDList.size()"+busLineIDList.size());

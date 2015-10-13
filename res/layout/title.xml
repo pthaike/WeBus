@@ -25,5 +25,13 @@
         android:text="webus"
         android:layout_marginLeft="2dp"
         android:layout_marginTop="3dp"   
-        android:textStyle="bold"/>     
+        android:textStyle="bold"/>
+     <Button  
+        android:id="@+id/setbt"     
+        android:layout_width="0px"  
+        android:layout_weight="1"
+        android:layout_height="wrap_content"     
+        android:layout_margin="3dp"  
+        android:onClick="SetOnclick"
+        android:background="@drawable/lang"/> 
 </LinearLayout>  

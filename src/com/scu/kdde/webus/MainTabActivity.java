@@ -1,10 +1,16 @@
 package com.scu.kdde.webus;
 
+import java.util.Locale;
+
 import android.app.TabActivity;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.RadioButton;
@@ -22,6 +28,7 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 	private Intent mDIntent;
 	private Intent mEIntent;
 	private TextView titletext = null;
+	private Button setbt = null;
 	
     /** Called when the activity is first created. */
     @Override
@@ -31,10 +38,12 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
         setContentView(R.layout.maintabs);
         getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.title);
         titletext = (TextView)findViewById(R.id.titletext);
+        setbt = (Button)findViewById(R.id.setbt);
+        
         this.mAIntent = new Intent(this,RoutePlanDemo.class);
         this.mBIntent = new Intent(this,CrowActivity.class);
-        this.mDIntent = new Intent(this,UserActivity.class);
-        this.mEIntent = new Intent(this,LoginActivity.class);
+        this.mDIntent = new Intent(this,InfoAndCommentActivity.class);
+        this.mEIntent = new Intent(this,UserInfoActivity.class);
         
 		((RadioButton) findViewById(R.id.radio_button0))
 		.setOnCheckedChangeListener(this);
@@ -161,4 +170,32 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 		}
 		
 	}
+	public void SetOnclick(View v) {
+		Locale curLocale = getResources().getConfiguration().locale;
+		
+		if(curLocale.getLanguage().equals(Locale.SIMPLIFIED_CHINESE.getLanguage())){
+			setLang(Locale.ENGLISH);
+			setbt.setText("ZH");
+		}else{
+			setLang(Locale.SIMPLIFIED_CHINESE);
+			setbt.setText("EN");
+		}
+	}
+	private void setLang(Locale l) {
+		// TODO Auto-generated method stub
+		Resources resources = getResources();
+		// 获得设置对象
+		Configuration config = resources.getConfiguration();
+		// 获得屏幕参数：主要是分辨率，像素等。
+		DisplayMetrics dm = resources.getDisplayMetrics();
+		// 语言
+		config.locale = l;
+		resources.updateConfiguration(config, dm);
+		
+		// 刷新activity才能马上奏效
+		startActivity(new Intent().setClass(MainTabActivity.this,
+				MainTabActivity.class));
+		MainTabActivity.this.finish();
+	}
+
 }
