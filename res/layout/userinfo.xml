@@ -34,7 +34,7 @@
 		        <TextView 
 		        	android:layout_width="fill_parent"    
 		        	android:layout_height="fill_parent"
-		        	android:text="用户设置" 
+		        	android:text="@string/account_set" 
 		        	android:textSize="20sp" 
 		        	android:gravity="center_vertical"  />  
 		    </LinearLayout> 
@@ -59,7 +59,7 @@
 		             <TextView 
 			        	android:layout_width="wrap_content"    
 			        	android:layout_height="wrap_content"
-			        	android:text="用户名" 
+			        	android:text="@string/register_label_username" 
 			        	android:textSize="20sp" 
 			        	android:gravity="left"  /> 
 			        <EditText 
@@ -81,7 +81,7 @@
 		             <TextView 
 			        	android:layout_width="wrap_content"    
 			        	android:layout_height="wrap_content"
-			        	android:text="密    码" 
+			        	android:text="@string/login_label_password" 
 			        	android:textSize="20sp" 
 			        	android:gravity="left"  /> 
 			        <EditText 
@@ -111,7 +111,7 @@
 			  	        android:layout_height="wrap_content"
 			  	        android:layout_marginLeft="5dp"
 			  	        android:layout_marginRight="5dp"
-			  	        android:text="更改" 
+			  	        android:text="@string/change" 
 			  	        android:background="#E3E3E3"/>				       
 		        </LinearLayout>      
 		    
@@ -132,7 +132,7 @@
 		        <TextView 
 		        	android:layout_width="fill_parent"    
 		        	android:layout_height="fill_parent"
-		        	android:text="IC卡" 
+		        	android:text="@string/ic_card" 
 		        	android:textSize="20sp" 
 		        	android:gravity="center_vertical"  />  
 		    </LinearLayout> 
@@ -155,7 +155,7 @@
 		  	        android:layout_width="0dp"
 	       			android:layout_weight="3"
 		  	        android:layout_height="wrap_content"
-		  	        android:hint="请输出IC卡卡号"
+		  	        android:hint="@string/iccard_hint"
 		  	        android:textSize="20sp"
 		  	        android:background="#FFF"
 		  	        android:inputType="text"
@@ -168,7 +168,7 @@
 	       			android:layout_marginRight="5dp"
 		  	        android:layout_height="wrap_content"
 		  	        android:background="#E3E3E3"
-		  	        android:text="绑定" />
+		  	        android:text="@string/bind_button_text" />
   				</LinearLayout>
   				<LinearLayout
 			  	    android:layout_width="fill_parent"
@@ -180,7 +180,7 @@
 		  			<TextView
 			  		    android:layout_width="wrap_content"
 			  		    android:layout_height="wrap_content"
-			  		    android:text="余    额" 
+			  		    android:text="@string/yue_label" 
 			  		    android:textSize="20sp"/>
 		  			<EditText
 			  		    android:id="@+id/yue_edit"
@@ -213,7 +213,7 @@
 					    android:layout_height="fill_parent"
 					    android:gravity="center_vertical"
 					    android:textSize="20sp"
-					    android:text="消费记录"/>				        	    
+					    android:text="@string/record_label"/>				        	    
 			    	<ImageView 
 			  		    android:layout_width="wrap_content"
 					    android:layout_height="wrap_content"
@@ -239,7 +239,7 @@
 					    android:layout_height="fill_parent"
 					    android:gravity="center_vertical"
 					    android:textSize="20sp"
-					    android:text="充值记录"/>				        	    
+					    android:text="@string/chongzhi_label"/>				        	    
 			    	<ImageView 
 			  		    android:layout_width="wrap_content"
 					    android:layout_height="wrap_content"
@@ -263,7 +263,7 @@
 		        	android:layout_width="0dp"
 		        	android:layout_weight="1"    
 		        	android:layout_height="fill_parent"
-		        	android:text="用户反馈" 
+		        	android:text="@string/FeedBack" 
 		        	android:textSize="20sp" 
 		        	android:gravity="center_vertical"  />  
 		        <ImageView 

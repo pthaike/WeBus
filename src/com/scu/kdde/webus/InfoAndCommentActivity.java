@@ -2,7 +2,9 @@ package com.scu.kdde.webus;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,21 +25,27 @@ public class InfoAndCommentActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.coment);
-		
+//		CharSequence titleLable = getResources().getString(R.string.notice_com_search);
+//	    setTitle(titleLable);
 		TabHost th=(TabHost)findViewById(R.id.infotabhost);						
 		
 		th.setup();            //初始化TabHost容器
 		
 		//在TabHost创建标签，然后设置：标题／图标／标签页布局
 		//th.addTab(th.newTabSpec("tab1").setIndicator("公告",getResources().getDrawable(R.drawable.checkbox_on)).setContent(R.id.tab1));
-		th.addTab(th.newTabSpec("tab1").setIndicator("公告",null).setContent(R.id.tab1));
-		th.addTab(th.newTabSpec("tab2").setIndicator("评论",null).setContent(R.id.tab2));
+		th.addTab(th.newTabSpec("tab1").setIndicator(getResources().getString(R.string.notice),null).setContent(R.id.tab1));
+		th.addTab(th.newTabSpec("tab2").setIndicator(getResources().getString(R.string.comment),null).setContent(R.id.tab2));
 		
+		TextView tv0 = (TextView) th.getTabWidget().getChildAt(0).findViewById(android.R.id.title); 
+		TextView tv1 = (TextView) th.getTabWidget().getChildAt(1).findViewById(android.R.id.title); 
+        tv0.setTextSize(20); 
+        tv1.setTextSize(20); 
 		
 		TabWidget tabWidget = th.getTabWidget();                                //获取TabHost的头部 
         
         for (int i=0; i<tabWidget.getChildCount(); i++){                         //循环每个tabView
-            View view = tabWidget.getChildAt(i);                                 //获取tabView项   
+            View view = tabWidget.getChildAt(i); 
+            //获取tabView项   
             view.setBackgroundResource(R.drawable.menu_selector);      
             //view.setBackgroundColor("#E3E3E3");
          }

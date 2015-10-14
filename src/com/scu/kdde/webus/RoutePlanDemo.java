@@ -15,6 +15,8 @@ import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.InfoWindow;
 import com.baidu.mapapi.map.MapPoi;
+import com.baidu.mapapi.map.MapStatus;
+import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.model.LatLng;
@@ -62,11 +64,16 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
         super.onCreate(savedInstanceState);
         SDKInitializer.initialize(getApplicationContext()); 
         setContentView(R.layout.activity_routeplan);
-        CharSequence titleLable = "路线规划功能";
-        setTitle(titleLable);
+//        CharSequence titleLable = getResources().getString(R.string.route_search);
+//        setTitle(titleLable);
         //初始化地图
         mMapView = (MapView) findViewById(R.id.map);
         mBaidumap = mMapView.getMap();
+        LatLng cenpt = new LatLng(31.22, 121.48);
+        MapStatus mMapStatus = new MapStatus.Builder().target(cenpt).zoom(18).build();
+        MapStatusUpdate mMapStatusUpdate = MapStatusUpdateFactory.newMapStatus(mMapStatus);
+        mBaidumap.setMapStatus(mMapStatusUpdate);
+        
         mBtnPre = (Button) findViewById(R.id.pre);
         mBtnNext = (Button) findViewById(R.id.next);
         mBtnPre.setVisibility(View.INVISIBLE);

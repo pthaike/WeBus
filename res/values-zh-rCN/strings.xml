@@ -21,6 +21,9 @@
     <string name="login_username_hint">Email或手机号</string>  
     <string name="login_register_link">没有帐号？ <a href="#" mce_href="#">注册</a></string>   
     
+    <string name="account_set">用户设置</string>
+    <string name="change">更改</string>
+    <string name="ic_card">IC 卡</string>
     <string name="register_username">昵称</string>
     <string name="register_label_username">账号</string>
     <string name="register_rlabel_password">重复密码</string>
@@ -35,6 +38,16 @@
     <string name="drivesearch">驾车</string>
     <string name="bussearch">公交</string>
     <string name="walksearch">步行</string>
+    <string name="FeedBack">反馈</string>
     
     <string name="info">消息</string>
+    <string name="input_busline_hint">请输入评论的公交线路</string>
+    <string name="notice">公告</string>
+    <string name="comment">评论</string>
+    
+    <string name="route_search">路线查询</string>
+    <string name="Bus_cowd_search">公交拥挤查询</string>
+    <string name="notice_com_search">公告评论查询</string>
+    <string name="user_info">用户信息</string>
+    
 </resources>

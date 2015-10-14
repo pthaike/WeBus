@@ -100,10 +100,10 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 //				R.string.iccard, R.drawable.iccard,
 //				this.mCIntent));
 
-		localTabHost.addTab(buildTabSpec("D_TAB", R.string.user,
+		localTabHost.addTab(buildTabSpec("D_TAB", R.string.notice,
 				R.drawable.user, this.mDIntent));
 
-		localTabHost.addTab(buildTabSpec("MORE_TAB", R.string.other,
+		localTabHost.addTab(buildTabSpec("MORE_TAB", R.string.user,
 				R.drawable.bus, this.mEIntent));
 
 	}
@@ -129,17 +129,19 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 				{
 					switch(i){
 					case 0:
-						titletext.setText("路线查询");
+						titletext.setText(getResources().getString(R.string.route_search));
 						vw.setBackgroundDrawable(getResources().getDrawable(R.drawable.user_b));
 						break;
 					case 1:
-						titletext.setText("公交查询");
+						titletext.setText(getResources().getString(R.string.Bus_cowd_search));
 						vw.setBackgroundDrawable(getResources().getDrawable(R.drawable.user_b));
 						break;
 					case 2:
+						titletext.setText(getResources().getString(R.string.notice_com_search));
 						vw.setBackgroundDrawable(getResources().getDrawable(R.drawable.iccard_b));
 						break;
 					case 3:
+						titletext.setText(getResources().getString(R.string.user_info));
 						vw.setBackgroundDrawable(getResources().getDrawable(R.drawable.user_b));
 						break;
 					case 4:
@@ -175,10 +177,10 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 		
 		if(curLocale.getLanguage().equals(Locale.SIMPLIFIED_CHINESE.getLanguage())){
 			setLang(Locale.ENGLISH);
-			setbt.setText("ZH");
+			setbt.setText("EN");
 		}else{
 			setLang(Locale.SIMPLIFIED_CHINESE);
-			setbt.setText("EN");
+			setbt.setText("ZH");
 		}
 	}
 	private void setLang(Locale l) {

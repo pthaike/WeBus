@@ -10,6 +10,8 @@ public class UserInfoActivity extends Activity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.userinfo);
+		CharSequence titleLable = getResources().getString(R.string.user_info);
+	    setTitle(titleLable);
 	}
 
 }

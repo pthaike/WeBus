@@ -51,12 +51,8 @@ public class CrowActivity extends Activity implements
 		setContentView(R.layout.crowline);
 		
 		//设置语言
-		Configuration config = getResources().getConfiguration();
-		config.locale = Locale.TRADITIONAL_CHINESE;
-		getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-		
-		CharSequence titleLable = "拥挤查询";
-		setTitle(titleLable);
+//		CharSequence titleLable = getResources().getString(R.string.Bus_cowd_search);
+//	    setTitle(titleLable);
 		cityEdit = (EditText)findViewById(R.id.city);
 		routeEdit = (EditText)findViewById(R.id.searchkey);
 		searchbt = (Button)findViewById(R.id.search);
@@ -85,27 +81,27 @@ public class CrowActivity extends Activity implements
 				editSearchKey.getText().toString()));
 	}
 	
-	private List<Map<String, Object>> getData(){
-		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("title", "第一行数据");
-		list.add(map);
-		
-		map = new HashMap<String, Object>();
-		map.put("title", "第2行数据");
-		list.add(map);
-		
-		map = new HashMap<String, Object>();
-		map.put("title", "第3行数据");
-		list.add(map);
-		
-		map = new HashMap<String, Object>();
-		map.put("title", "第4行数据");
-		list.add(map);
-		
-		return list;
-		
-	}
+//	private List<Map<String, Object>> getData(){
+//		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+//		Map<String, Object> map = new HashMap<String, Object>();
+//		map.put("title", "第一行数据");
+//		list.add(map);
+//		
+//		map = new HashMap<String, Object>();
+//		map.put("title", "第2行数据");
+//		list.add(map);
+//		
+//		map = new HashMap<String, Object>();
+//		map.put("title", "第3行数据");
+//		list.add(map);
+//		
+//		map = new HashMap<String, Object>();
+//		map.put("title", "第4行数据");
+//		list.add(map);
+//		
+//		return list;
+//		
+//	}
 
 	//当执行searchBusLine时会出发事件
 	@Override
