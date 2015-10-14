@@ -111,6 +111,17 @@
 	        		</LinearLayout>
                 </LinearLayout>
        
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="#FFFFFF">
+					 <TextView android:id="@+id/event"
+					     android:layout_margin="10dp"
+					     android:layout_width="fill_parent"
+					     android:layout_height="fill_parent"/>    
+                </LinearLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost> 

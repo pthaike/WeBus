@@ -70,7 +70,7 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
         mMapView = (MapView) findViewById(R.id.map);
         mBaidumap = mMapView.getMap();
         LatLng cenpt = new LatLng(31.22, 121.48);
-        MapStatus mMapStatus = new MapStatus.Builder().target(cenpt).zoom(18).build();
+        MapStatus mMapStatus = new MapStatus.Builder().target(cenpt).zoom(10).build();
         MapStatusUpdate mMapStatusUpdate = MapStatusUpdateFactory.newMapStatus(mMapStatus);
         mBaidumap.setMapStatus(mMapStatusUpdate);
         

@@ -50,4 +50,6 @@
     <string name="Bus_cowd_search">BUS CROWD SEARCH</string>
     <string name="notice_com_search">NOTICE COMMENT</string>
     <string name="user_info">USER INFOMATION</string>
+    
+    <string name="Warning">Warn</string>
 </resources>
