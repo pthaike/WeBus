@@ -117,7 +117,7 @@ public class LoginActivity extends Activity {
 						connector.out.writeUTF(user);
 						connector.out.writeUTF(psw);
 						boolean logininfo = connector.in.readBoolean();
-						System.out.println("client_+++++++++++++++++_>"+logininfo);
+						//System.out.println("client_+++++++++++++++++_>"+logininfo);
 						if (logininfo == true){
 							Toast.makeText(LoginActivity.this, "µÇÂ¼³É¹¦", Toast.LENGTH_LONG);
 						}else{

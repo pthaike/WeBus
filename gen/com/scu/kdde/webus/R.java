@@ -111,11 +111,12 @@ public final class R {
         public static final int bmapView=0x7f050006;
         public static final int buy_record=0x7f05004a;
         public static final int chongzhi_butten=0x7f050045;
-        public static final int city=0x7f050018;
+        public static final int city=0x7f050019;
         public static final int consume_record=0x7f050049;
+        public static final int crowdrate=0x7f050016;
         public static final int drive=0x7f05000b;
         public static final int end=0x7f05000a;
-        public static final int event=0x7f050017;
+        public static final int event=0x7f050018;
         public static final int feedback=0x7f05004b;
         public static final int iccard=0x7f05003f;
         public static final int iccard_edit=0x7f050048;
@@ -140,7 +141,6 @@ public final class R {
         public static final int map=0x7f05000e;
         public static final int miniTwitter_logo=0x7f050027;
         public static final int next=0x7f050010;
-        public static final int nextline=0x7f05001b;
         public static final int password_edit=0x7f050024;
         public static final int pre=0x7f05000f;
         public static final int radio_button0=0x7f050001;
@@ -157,15 +157,15 @@ public final class R {
         public static final int register_user_edit=0x7f05002c;
         public static final int register_username_edit=0x7f05002b;
         public static final int relative=0x7f050038;
-        public static final int search=0x7f05001a;
-        public static final int searchkey=0x7f050019;
+        public static final int search=0x7f05001b;
+        public static final int searchkey=0x7f05001a;
         public static final int setbt=0x7f05003d;
         public static final int show_time=0x7f050035;
         public static final int signin_button=0x7f050025;
         public static final int start=0x7f050008;
         public static final int tab1=0x7f050012;
         public static final int tab2=0x7f050014;
-        public static final int tab3=0x7f050016;
+        public static final int tab3=0x7f050017;
         public static final int textView1=0x7f050007;
         public static final int textView2=0x7f050009;
         public static final int title=0x7f05003a;
@@ -191,10 +191,11 @@ public final class R {
         public static final int logo=0x7f030006;
         public static final int maintabs=0x7f030007;
         public static final int register=0x7f030008;
-        public static final int timelist=0x7f030009;
-        public static final int title=0x7f03000a;
-        public static final int user=0x7f03000b;
-        public static final int userinfo=0x7f03000c;
+        public static final int test=0x7f030009;
+        public static final int timelist=0x7f03000a;
+        public static final int title=0x7f03000b;
+        public static final int user=0x7f03000c;
+        public static final int userinfo=0x7f03000d;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -213,6 +214,7 @@ public final class R {
         public static final int chongzhi_label=0x7f06001f;
         public static final int city=0x7f06000c;
         public static final int comment=0x7f060027;
+        public static final int crowdrate=0x7f06002d;
         public static final int drivesearch=0x7f060021;
         public static final int end=0x7f06000a;
         public static final int hello_world=0x7f060001;

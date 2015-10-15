@@ -51,5 +51,6 @@
     <string name="notice_com_search">NOTICE COMMENT</string>
     <string name="user_info">USER INFOMATION</string>
     
-    <string name="Warning">Warn</string>
+    <string name="Warning">WARN</string>
+    <string name="crowdrate">Crowd Rate</string>
 </resources>

@@ -156,7 +156,7 @@ public class CrowActivity extends Activity implements
 				//System.out.println("poi.uid+++++++>"+poi.uid);
 			}
 		}
-		System.out.println("onGetPoiResult++busLineIDList.size()"+busLineIDList.size());
+		//System.out.println("onGetPoiResult++busLineIDList.size()"+busLineIDList.size());
 		if(busLineIDList.size()>0){
 			//根据uid查询每条公交详情
 			mBusLineSearch.searchBusLine((new BusLineSearchOption()

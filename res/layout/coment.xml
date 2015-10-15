@@ -96,6 +96,21 @@
 						        android:layout_height="wrap_content"
 						        android:background="@drawable/reply"/>
 						</LinearLayout>
+						<LinearLayout android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:orientation="horizontal">
+						    <TextView android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:text="@string/crowdrate"/>
+						    <RatingBar android:id="@+id/crowdrate"
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        style="?android:attr/ratingBarStyleSmall"
+						        android:numStars="10"
+						        android:rating="6"
+						        android:layout_marginLeft="10dp"
+						        />
+						</LinearLayout>
 						<LinearLayout 
         			        android:layout_width="fill_parent"
 						    android:layout_height="fill_parent"

@@ -70,12 +70,6 @@
                 android:background="@drawable/search"
                 android:onClick="searchButtonProcess" />
 
-            <Button
-                android:id="@+id/nextline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/next"
-                android:onClick="SearchNextBusline" />
 
         </LinearLayout>
     
