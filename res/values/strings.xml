@@ -53,4 +53,5 @@
     
     <string name="Warning">WARN</string>
     <string name="crowdrate">Crowd Rate</string>
+    <string name="buscrowrate">Delay Rate</string>
 </resources>
