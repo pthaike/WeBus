@@ -19,6 +19,7 @@ public class TimeLineAdapter extends BaseAdapter{
 	
 	public TimeLineAdapter(Context context, List<Map<String, Object>> list) {
 		super();
+		System.out.println("Time= struct=======================>");
 		this.context = context;
 		this.list = list;
 	}
@@ -44,6 +45,7 @@ public class TimeLineAdapter extends BaseAdapter{
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
+		System.out.println("Time========================>");
 		ViewHolder  viewHolder = null;
 		if (convertView == null){
 			inflater = LayoutInflater.from(parent.getContext());

@@ -34,8 +34,10 @@ public class CrowActivity extends Activity implements
 	OnGetPoiSearchResultListener, OnGetBusLineSearchResultListener {
 
 	private ListView listView = null;
+	private ListView corwdlistview = null;
 	private List<String> data = null;
 	private TimeLineAdapter timeLineAdapter = null;
+	private CrowdAdapter crowdAdapter = null;
 	private EditText cityEdit = null;
 	private EditText routeEdit = null;
 	private Button searchbt = null;
@@ -45,18 +47,18 @@ public class CrowActivity extends Activity implements
 	private int busLineIndex = 0;
 	private BusLineResult route = null;
 	private List<Map<String, Object>> list = null;
+	private List<Map<String, Object>> crowlist = null;
+	private int[] crowdpro = {18, 37, 41, 24, 16, 19, 17, 21, 22, 27, 31, 39, 28, 16, 14, 13, 10, 0, 2};
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.crowline);
 		
-		//设置语言
-//		CharSequence titleLable = getResources().getString(R.string.Bus_cowd_search);
-//	    setTitle(titleLable);
 		cityEdit = (EditText)findViewById(R.id.city);
 		routeEdit = (EditText)findViewById(R.id.searchkey);
 		searchbt = (Button)findViewById(R.id.search);
 		listView = (ListView) this.findViewById(R.id.lv_list);
+		corwdlistview = (ListView) findViewById(R.id.crow_list);
 		
 		mSearch = PoiSearch.newInstance();
 		mSearch.setOnGetPoiSearchResultListener(this);
@@ -64,10 +66,23 @@ public class CrowActivity extends Activity implements
 		mBusLineSearch.setOnGetBusLineSearchResultListener(this);
 		
 		busLineIDList = new ArrayList<String>();
-		
+		//getCrowdTime();
 		listView.setDividerHeight(0);
-//		timeLineAdapter = new TimeLineAdapter(this, getData());
-//		listView.setAdapter(timeLineAdapter);
+		corwdlistview.setDividerHeight(0);
+	}
+	
+	private void getCrowdTime(){
+		Map<String, Object> map = null;
+		
+		for(int i = 6; i<24; i++){
+			map = new HashMap<String, Object>();
+			//map.put("crowdtime", i+"~"+(i+1));
+			//map.put("crowdpro", crowdpro[i-6]+"");
+			map.put("time", i+":00~"+(i+1)+":00");
+			map.put("crowd", crowdpro[i-6]+"");
+			System.out.println(crowdpro[i-6]);
+			crowlist.add(map);
+		}
 	}
 	
 	public void searchButtonProcess(View v) {
@@ -81,28 +96,6 @@ public class CrowActivity extends Activity implements
 				editSearchKey.getText().toString()));
 	}
 	
-//	private List<Map<String, Object>> getData(){
-//		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-//		Map<String, Object> map = new HashMap<String, Object>();
-//		map.put("title", "第一行数据");
-//		list.add(map);
-//		
-//		map = new HashMap<String, Object>();
-//		map.put("title", "第2行数据");
-//		list.add(map);
-//		
-//		map = new HashMap<String, Object>();
-//		map.put("title", "第3行数据");
-//		list.add(map);
-//		
-//		map = new HashMap<String, Object>();
-//		map.put("title", "第4行数据");
-//		list.add(map);
-//		
-//		return list;
-//		
-//	}
-
 	//当执行searchBusLine时会出发事件
 	@Override
 	public void onGetBusLineResult(BusLineResult result) {
@@ -113,11 +106,7 @@ public class CrowActivity extends Activity implements
 			return;
 		}
 		route = result;
-		//System.out.println("BusLineName====>"+result.getBusLineName());
-//		overlay.removeFromMap();
-//		overlay.setData(result);
-//		overlay.addToMap();
-//		overlay.zoomToSpan();
+
 		Map<String, Object> map = null;
 		list = new ArrayList<Map<String, Object>>();
 		for(int i= 0; i<route.getStations().size(); i++){
@@ -129,6 +118,11 @@ public class CrowActivity extends Activity implements
 		}
 		timeLineAdapter = new TimeLineAdapter(this, list);
 		listView.setAdapter(timeLineAdapter);
+		crowlist = new ArrayList<Map<String, Object>>();
+		getCrowdTime();
+		//crowdAdapter = new CrowdAdapter(this, crowdlist);
+		crowdAdapter = new CrowdAdapter(this, crowlist);
+		corwdlistview.setAdapter(crowdAdapter);
 		Toast.makeText(CrowActivity.this, result.getBusLineName(),
 				Toast.LENGTH_SHORT).show(); //获取每个点信息
 	}
@@ -138,7 +132,7 @@ public class CrowActivity extends Activity implements
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 	@Override
 	public void onGetPoiResult(PoiResult result) {
 		// TODO Auto-generated method stub
@@ -153,7 +147,6 @@ public class CrowActivity extends Activity implements
 			if (poi.type == PoiInfo.POITYPE.BUS_LINE
 					|| poi.type == PoiInfo.POITYPE.SUBWAY_LINE) {
 				busLineIDList.add(poi.uid);
-				//System.out.println("poi.uid+++++++>"+poi.uid);
 			}
 		}
 		//System.out.println("onGetPoiResult++busLineIDList.size()"+busLineIDList.size());

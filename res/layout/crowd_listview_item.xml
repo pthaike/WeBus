@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layout_margin="10dp"
+    android:orientation="vertical">  
+    <TextView android:id="@+id/crowdtime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="#ff8000"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        
+        />
+    <ProgressBar android:id="@+id/crowdpro"
+        android:layout_width="fill_parent"
+        android:layout_height="10px"
+        android:max="100"
+        android:progress="50"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        /> 
+</LinearLayout>  

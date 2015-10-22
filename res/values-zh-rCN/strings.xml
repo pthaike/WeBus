@@ -51,6 +51,8 @@
     <string name="user_info">用户信息</string>
     
     <string name="Warning">预警</string>
-    <string name="crowdrate">拥堵</string>
+    <string name="crowdrate">舒适度</string>
     <string name="buscrowrate">延迟</string>
+    <string name="station">站点</string>
+    <string name="buscrowd">车内拥挤度</string>
 </resources>
