@@ -48,7 +48,7 @@ public class CrowActivity extends Activity implements
 	private BusLineResult route = null;
 	private List<Map<String, Object>> list = null;
 	private List<Map<String, Object>> crowlist = null;
-	private int[] crowdpro = {18, 37, 41, 24, 16, 19, 17, 21, 22, 27, 31, 39, 28, 16, 14, 13, 10, 0, 2};
+	private int[] crowdpro = {34, 93, 100, 53, 32, 34, 39, 39, 39, 55, 55, 76, 60, 34, 27, 27, 20, 0, 6};
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
