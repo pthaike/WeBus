@@ -76,8 +76,37 @@
         android:layout_marginBottom="5dip"
         android:layout_marginTop="5dip"
         android:orientation="horizontal" >
+        
+        <LinearLayout android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2">
+            <TextView android:id="@+id/timetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
 
-        <Button
+        <LinearLayout android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <Button
+            android:id="@+id/transit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/button_style"
+            android:onClick="SearchButtonProcess"
+            android:text="@string/bussearch" />
+            
+        </LinearLayout>
+    <!--     <Button
             android:id="@+id/drive"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -88,18 +117,7 @@
             android:onClick="SearchButtonProcess"
             android:text="@string/drivesearch" />
 
-        <Button
-            android:id="@+id/transit"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginLeft="2dip"
-            android:layout_marginRight="2dip"
-            android:layout_weight="1.0"
-            android:background="@drawable/button_style"
-            android:onClick="SearchButtonProcess"
-            android:text="@string/bussearch" />
-
-        <Button
+<Button
             android:id="@+id/walk"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -109,6 +127,18 @@
             android:background="@drawable/button_style"
             android:onClick="SearchButtonProcess"
             android:text="@string/walksearch" />
+        <Button
+            android:id="@+id/transit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/button_style"
+            android:onClick="SearchButtonProcess"
+            android:text="@string/bussearch" /> -->
+
+        
     </LinearLayout>
 
     <View  

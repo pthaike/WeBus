@@ -53,6 +53,7 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
     OverlayManager routeOverlay = null;
     boolean useDefaultIcon = false;
     private TextView popupText = null;//泡泡view
+    TextView timeTextview = null;
 
     //地图相关，使用继承MapView的MyRouteMapView目的是重写touch事件实现泡泡处理
     //如果不处理touch事件，则无需继承，直接使用MapView即可
@@ -67,6 +68,7 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
 //        CharSequence titleLable = getResources().getString(R.string.route_search);
 //        setTitle(titleLable);
         //初始化地图
+        timeTextview = (TextView)findViewById(R.id.timetv);
         mMapView = (MapView) findViewById(R.id.map);
         mBaidumap = mMapView.getMap();
         LatLng cenpt = new LatLng(31.22, 121.48);
@@ -104,20 +106,25 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
         PlanNode enNode = PlanNode.withCityNameAndPlaceName("上海", editEn.getText().toString());
 
         // 实际使用中请对起点终点城市进行正确的设定
-        if (v.getId() == R.id.drive) {
+/*        if (v.getId() == R.id.drive) {
             mSearch.drivingSearch((new DrivingRoutePlanOption())
                     .from(stNode)
                     .to(enNode));
-        } else if (v.getId() == R.id.transit) {
+        } else */
+        
+        if (v.getId() == R.id.transit) {
+        	timeTextview.setText("到达时间:50");
             mSearch.transitSearch((new TransitRoutePlanOption())
                     .from(stNode)
                     .city("上海")
                     .to(enNode));
-        } else if (v.getId() == R.id.walk) {
+        } /*else 
+        	/*if (v.getId() == R.id.walk) {
+        		timeTextview.setText("到达时间:50");
             mSearch.walkingSearch((new WalkingRoutePlanOption())
                     .from(stNode)
                     .to(enNode));
-        }
+        }*/
     }
 
     /**
