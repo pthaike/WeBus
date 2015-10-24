@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class TimeLineAdapter extends BaseAdapter{
@@ -51,22 +52,24 @@ public class TimeLineAdapter extends BaseAdapter{
 			inflater = LayoutInflater.from(parent.getContext());
 			convertView = inflater.inflate(R.layout.timelist, null);
 			viewHolder = new ViewHolder();
-			viewHolder.title = (TextView)convertView.findViewById(R.id.title);
+			//viewHolder.title = (TextView)convertView.findViewById(R.id.title);
+			viewHolder.station = (ProgressBar)convertView.findViewById(R.id.stationpeop);
 			viewHolder.showtime = (TextView)convertView.findViewById(R.id.show_time);
 			convertView.setTag(viewHolder);
 		}else{
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
-		String titlestr = list.get(position).get("title").toString();
-		viewHolder.title.setText(titlestr);
+		//String titlestr = list.get(position).get("title").toString();
+		//viewHolder.title.setText(titlestr);
 		viewHolder.showtime.setText(list.get(position).get("station").toString());
+		int crawdstation = Integer.parseInt(list.get(position).get("crowd").toString());
+		viewHolder.station.setProgress(crawdstation);
 		return convertView;
 	}
 	
 	static class ViewHolder{
-		public TextView year;
-		public TextView month;
 		public TextView title;
 		public TextView showtime;
+		public ProgressBar station;
 	}
 }

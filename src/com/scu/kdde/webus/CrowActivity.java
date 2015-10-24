@@ -49,6 +49,7 @@ public class CrowActivity extends Activity implements
 	private List<Map<String, Object>> list = null;
 	private List<Map<String, Object>> crowlist = null;
 	private int[] crowdpro = {34, 93, 100, 53, 32, 34, 39, 39, 39, 55, 55, 76, 60, 34, 27, 27, 20, 0, 6};
+	private int[] crowdstation = {30, 45, 48, 60, 43, 34, 39, 39, 39, 55, 55, 76, 60, 34, 27, 27, 20, 0, 6};
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -112,7 +113,7 @@ public class CrowActivity extends Activity implements
 		for(int i= 0; i<route.getStations().size(); i++){
 			map = new HashMap<String, Object>();
 			map.put("station", route.getStations().get(i).getTitle());
-			map.put("title", i);
+			map.put("crowd", crowdstation[i]);
 			list.add(map);
 			//System.out.println("route.getStations()====>"+route.getStations().get(i).getTitle());
 		}

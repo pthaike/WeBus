@@ -4,7 +4,7 @@
   android:orientation="vertical"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
-  android:background="@drawable/background_login">
+  android:background="#F0F0F0">
   <!-- padding 内边距   layout_margin 外边距
   		android:layout_alignParentTop 布局的位置是否处于顶部 -->
   <RelativeLayout 
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/password_edit"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/blue_button"
+        android:background="#E3E3E3"
         android:text="@string/login_label_signin" />
 
   </RelativeLayout>

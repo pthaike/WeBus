@@ -61,14 +61,24 @@
 
         <ImageView
             android:id="@+id/image_1"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
             android:src="@drawable/busicon" />
 
-        <TextView
+        <ProgressBar android:id="@+id/stationpeop"
+            android:layout_width="wrap_content"
+            android:layout_height="10px"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:max="100"
+	        android:progress="50"
+	        android:layout_marginLeft="3dp"
+	        android:layout_marginRight="3dp"
+	        style="?android:attr/progressBarStyleHorizontal"/>
+<!--         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,8 +89,8 @@
             android:paddingLeft="5dp"
             android:singleLine="true"
             android:textColor="#ff8000"
-            android:text="测试数据"
-            android:textSize="12sp" />
+            android:text="测试数据121"
+            android:textSize="12sp" /> -->
 
     </LinearLayout>
 
