@@ -113,7 +113,7 @@ public class RoutePlanDemo extends Activity implements BaiduMap.OnMapClickListen
         } else */
         
         if (v.getId() == R.id.transit) {
-        	timeTextview.setText("到达时间:50");
+        	timeTextview.setText("预计到达时间:50分钟");
             mSearch.transitSearch((new TransitRoutePlanOption())
                     .from(stNode)
                     .city("上海")

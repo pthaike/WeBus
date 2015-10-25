@@ -62,7 +62,7 @@
                     <LinearLayout 
                         android:layout_width="fill_parent"
         			    android:layout_height="0px"
-        			    android:layout_weight="2"
+        			    android:layout_weight="3"
         			    android:orientation="vertical">
 	                    <ListView 
 						     android:id="@+id/PListView"
@@ -74,7 +74,7 @@
         			<LinearLayout 
         			    android:layout_width="fill_parent"
         			    android:layout_height="0px"
-        			    android:layout_weight="1"
+        			    android:layout_weight="2"
         			    android:orientation="vertical">	        			 			        		
 						<LinearLayout 
 						    android:layout_width="fill_parent"
@@ -98,6 +98,9 @@
 						</LinearLayout>
 						<LinearLayout android:layout_width="fill_parent"
 						    android:layout_height="wrap_content"
+						    android:orientation="vertical">
+						    <LinearLayout android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
 						    android:orientation="horizontal">
 						    <TextView android:layout_width="wrap_content"
 						        android:layout_height="wrap_content"
@@ -112,7 +115,7 @@
 						        />
 						    <TextView android:layout_width="wrap_content"
 						        android:layout_height="wrap_content"
-						        android:layout_marginLeft="10dp"
+						        android:layout_marginLeft="15dp"
 						        android:text="@string/buscrowrate"/>
 						    <RatingBar android:id="@+id/delayrate"
 						        android:layout_width="wrap_content"
@@ -123,6 +126,35 @@
 						        android:layout_marginLeft="5dp"
 						        />
 						</LinearLayout>
+						<LinearLayout android:layout_width="fill_parent"
+						    android:layout_height="wrap_content"
+						    android:orientation="horizontal">
+						    <TextView android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:text="车内环境"/>
+						    <RatingBar android:id="@+id/environment"
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        style="?android:attr/ratingBarStyleSmall"
+						        android:numStars="5"
+						        android:rating="4"
+						        android:layout_marginLeft="5dp"
+						        />
+						    <TextView android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:layout_marginLeft="15dp"
+						        android:text="驾驶员礼仪"/>
+						    <RatingBar android:id="@+id/attitude"
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        style="?android:attr/ratingBarStyleSmall"
+						        android:numStars="5"
+						        android:rating="5"
+						        android:layout_marginLeft="5dp"
+						        />
+						</LinearLayout>
+						</LinearLayout>
+						
 						<LinearLayout 
         			        android:layout_width="fill_parent"
 						    android:layout_height="fill_parent"

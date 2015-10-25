@@ -4,7 +4,7 @@
     <string name="app_name">WeBus</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="busline">公交</string>
+    <string name="busline">拥挤</string>
     <string name="line">路线</string>
     <string name="linename">路线:</string>
     <string name="mapsearch">地图</string>
@@ -36,7 +36,7 @@
     <string name="record_label">消费记录查询</string>
     <string name="chongzhi_label">充值记录查询</string>
     <string name="drivesearch">驾车</string>
-    <string name="bussearch">公交</string>
+    <string name="bussearch">公交查询</string>
     <string name="walksearch">步行</string>
     <string name="FeedBack">反馈</string>
     
@@ -51,7 +51,7 @@
     <string name="user_info">用户信息</string>
     
     <string name="Warning">预警</string>
-    <string name="crowdrate">舒适度</string>
+    <string name="crowdrate">拥挤度</string>
     <string name="buscrowrate">延迟</string>
     <string name="station">站点拥挤度</string>
     <string name="buscrowd">时段拥挤度</string>
