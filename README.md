@@ -12,6 +12,9 @@
 
 >BaiduMap AndroidSDK3.5.0
 
-##客户端运行实例
+##运行环境
+>Android 4.0.3以上平台
+
+#客户端运行实例
 [运行实例（点击查看）](https://github.com/pthaike/WeBus/wiki/WeBus)
 
